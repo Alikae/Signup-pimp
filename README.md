@@ -1,24 +1,2 @@
-# README
-
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Lien Heroku: https://limitless-waters-19095.herokuapp.com/users/sign_up
+Pour une raison qui m'échappe encore l'image de background qui marche très bien en local n'apparait pas sur Heroku.
