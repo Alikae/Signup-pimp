@@ -5,7 +5,7 @@ html
 }
 .page
 {
-  background: url("pavage.jpg");
+  background: asset-data-url('pavage.jpg');
   background-position: center;
   display: flex;
   flex-direction: column;
