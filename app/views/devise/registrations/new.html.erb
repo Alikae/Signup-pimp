@@ -1,29 +1,79 @@
-<h2>Sign up</h2>
-
-<%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
-  <%= devise_error_messages! %>
-
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+<head> <%= stylesheet_link_tag "custom" %> </head>
+<div class="page">
+  <div class="window">
+    <div class="textside">
+      <div class="yolo">
+        <div class="title">
+          <h1>The Hacking Got Talent!</h1>
+        </div>
+        <div class="phrase">
+          Le site dénicheur de talents
+        </div>
+        <div class="phrase">
+          ____________
+        </div>
+        <div class="line">
+          <div class="icon">
+            <%= image_tag("looking-eye.png") %>
+          </div>
+          <div>
+            Publiez des vidéos de vous exercant votre talent!
+          </div>
+        </div>
+        <div class="line">
+          <div class="icon">
+            <%= image_tag("buble.png") %>
+          </div>
+          <div>
+            Commentez les vidéos des autres moussaillons!
+          </div>
+        </div>
+        <div class="line">
+          <div class="icon">
+            <%= image_tag("i-like-it.png") %>
+          </div>
+          <div>
+            Notez les et que le meilleur gagne!
+          </div>
+        </div>
+        <div class="line">
+          <div class="icon">
+            <%= image_tag("planet-land.png") %>
+          </div>
+          <div>
+            <strong>MONTREZ LEUR VOTRE TALENT!!!</strong>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="loyo">
+      <div class="formside">
+        <div class="phrase">
+          Entrez vos identifiants
+        </div>
+        <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+        <%= devise_error_messages! %>
+        <div class="field">
+          <%= f.label :email %><br />
+          <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+        </div>
+        <div class="field">
+          <%= f.label :password %>
+          <% if @minimum_password_length %>
+          <em>(<%= @minimum_password_length %> characters minimum)</em>
+          <% end %><br />
+          <div class="passw"><%= f.password_field :password, autocomplete: "off"%></div>
+        </div>
+        <div class="field">
+          <%= f.label :password_confirmation %><br />
+          <%= f.password_field :password_confirmation, autocomplete: "off" %>
+        </div>
+        <div class="bluebutton"><div class="button"><input type='submit' name='validerHide' value='nimporteQuoi' />S'inscrire avec Entrée</div></div>
+        <% end %>
+      </div>
+      <div class="bottombutton">
+        <a class="link_class" href="sign_in">J'ai déja un compte!</a>
+      </div>
+    </div>
   </div>
-
-  <div class="field">
-    <%= f.label :password %>
-    <% if @minimum_password_length %>
-    <em>(<%= @minimum_password_length %> characters minimum)</em>
-    <% end %><br />
-    <%= f.password_field :password, autocomplete: "off" %>
-  </div>
-
-  <div class="field">
-    <%= f.label :password_confirmation %><br />
-    <%= f.password_field :password_confirmation, autocomplete: "off" %>
-  </div>
-
-  <div class="actions">
-    <%= f.submit "Sign up" %>
-  </div>
-<% end %>
-
-<%= render "devise/shared/links" %>
+</div>
