@@ -5,7 +5,7 @@ html
 }
 .page
 {
-  background-image: url(pavage.png);
+  background: url("pavage.png");
   background-position: center;
   display: flex;
   flex-direction: column;
